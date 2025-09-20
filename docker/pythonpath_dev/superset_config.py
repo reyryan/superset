@@ -99,6 +99,13 @@ class CeleryConfig:
 
 CELERY_CONFIG = CeleryConfig
 
+APP_NAME = "Smart FMS"
+APP_ICON = "/static/assets/images/rnr/RnR_logo.svg"
+LOGO_RIGHT_TEXT = "Smart FMS"
+FAVICONS = [{
+    "href": "/static/assets/images/rnr/RnR_favicon.png"
+}]
+
 FEATURE_FLAGS = {"ALERT_REPORTS": True}
 ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
 WEBDRIVER_BASEURL = f"http://superset_app{os.environ.get('SUPERSET_APP_ROOT', '/')}/"  # When using docker compose baseurl should be http://superset_nginx{ENV{BASEPATH}}/  # noqa: E501

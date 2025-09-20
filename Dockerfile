@@ -179,6 +179,9 @@ RUN --mount=type=cache,target=${SUPERSET_HOME}/.cache/uv \
         echo "Skipping browser installation"; \
     fi
 
+#Copy our image assets (RnR)
+COPY to_be_copied_to_assets /app/superset/static/assets/images
+
 # Copy required files for Python build
 COPY pyproject.toml setup.py MANIFEST.in README.md ./
 COPY superset-frontend/package.json superset-frontend/

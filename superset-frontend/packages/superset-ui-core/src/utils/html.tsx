@@ -25,8 +25,6 @@ const xssFilter = new FilterXSS({
     div: ['style', 'class'],
     a: ['style', 'class', 'href', 'title', 'target'],
     img: ['style', 'class', 'src', 'alt', 'title', 'width', 'height'],
-    tr: ['style', 'class'],
-    td: ['style', 'class'],
     video: [
       'autoplay',
       'controls',
